@@ -11,7 +11,7 @@ RUN powershell -NoLogo -NoProfile -Command \
 # installation of visualstudio2019-workload-vctools to fail. To workaround
 # the issue request Microsoft .NET Framework 4.7.2.20180712 instead, which
 # is already installed and thus speeds up installation as well.
-# this is just to prevent visualstudio2019 to force a reset in the machine
+# This is just to prevent visualstudio2019 to force a reset in the machine.
 
 RUN powershell -NoLogo -NoProfile -Command \
     Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) ; \
